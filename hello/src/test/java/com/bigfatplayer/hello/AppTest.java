@@ -38,6 +38,7 @@ public class AppTest
         assertEquals(9, result);
         result = app.mul(2, 3);
         assertEquals(6, result);
+        assertEquals(6, 6);
     }
 
     @Test
