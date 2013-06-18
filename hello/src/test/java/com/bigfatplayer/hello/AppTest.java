@@ -28,4 +28,13 @@ public class AppTest
         int result = app.add(2, 2);
         assertEquals(4, result);
     }
+
+    @Test
+    public void mul()
+    {
+        App app = new App();
+        int result = app.mul(3, 3);
+        assertEquals(9, result);
+    }
+
 }
