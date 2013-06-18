@@ -37,4 +37,12 @@ public class AppTest
         assertEquals(9, result);
     }
 
+    @Test
+    public void failMul()
+    {
+        App app = new App();
+        int result = app.mul(3, 3);
+        assertEquals(10, result);
+    }
+
 }
