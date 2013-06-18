@@ -10,8 +10,6 @@ import org.junit.runners.JUnit4;
 
 /**
  * Test for {@link App}
- *
- *
  */
 @RunWith(JUnit4.class)
 public class AppTest
@@ -46,7 +44,7 @@ public class AppTest
     {
         App app = new App();
         int result = app.mul(3, 3);
-        assertEquals(10, result);
+        assertEquals(9, result);
     }
 
 }
