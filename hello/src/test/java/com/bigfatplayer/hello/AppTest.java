@@ -42,7 +42,6 @@ public class AppTest
     }
 
     @Test
-    @Ignore
     public void failMul()
     {
         App app = new App();
