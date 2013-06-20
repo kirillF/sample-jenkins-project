@@ -44,7 +44,13 @@ public class AppTest
     {
         App app = new App();
         int result = app.mul(3, 3);
-        assertEquals(10, result);
+        assertEquals(9, result);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void zeroDivisionTest() {
+        App app = new App();
+        app.divide(2, 0);
     }
 
 }

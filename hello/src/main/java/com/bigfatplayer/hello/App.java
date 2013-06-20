@@ -3,6 +3,7 @@ package com.bigfatplayer.hello;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 /**
  *
  */
@@ -16,6 +17,14 @@ public class App
     public int mul(int a, int b)
     {
         return a * b;
+    }
+
+    public double divide(int a, int b) throws IllegalArgumentException {
+        if (b == 0) {
+            throw new IllegalArgumentException("Argument 'divisor' is 0");
+        }
+
+        return a / b;
     }
 
     public static void main( String[] args )
