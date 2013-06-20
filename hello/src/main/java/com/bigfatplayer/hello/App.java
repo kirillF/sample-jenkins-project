@@ -1,7 +1,9 @@
 package com.bigfatplayer.hello;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
- * Hello world!
  *
  */
 public class App 
@@ -18,8 +20,18 @@ public class App
 
     public static void main( String[] args )
     {
+        Logger logger = LoggerFactory.getLogger(App.class);
         App app = new App();
+
         int result = app.add(2, 2);
         System.out.format("2 + 2 = %s\n", result);
+
+        Thread serverThread = new Thread(new AppServer());
+        Thread clientThread1 = new Thread(new AppClient());
+        Thread clientThread2 = new Thread(new AppClient());
+
+        serverThread.start();
+        clientThread1.start();
+        clientThread2.start();
     }
 }
